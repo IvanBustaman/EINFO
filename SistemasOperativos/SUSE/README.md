@@ -11,16 +11,16 @@ Este documento detalla el procedimiento técnico estandarizado para la instalaci
 
 ---
 
-### **Índice**
+### **Índice** 📘
 
 1.  [Prerrequisitos](#1-prerrequisitos)
 2.  [Preparación del Medio de Instalación](#2-preparación-del-medio-de-instalación)
-3.  [Procedimiento de Instalación Detallado](#3-procedimiento-de-instalación-detallado)
+3.  [Procedimiento de Instalación Detallado](#3-procedimiento-de-instalación-detallado) 🔬
     * [Fase 1: Arranque e Inicio](#fase-1-arranque-e-inicio)
     * [Fase 2: Configuración](#fase-2-configuración)
     * [Fase 3: Creación de usuario](#fase-3-creación-de-usuario)
-4.  [Verificación Post-Instalación](#4-verificación-post-instalación)
-5.  [Resolución de Problemas Comunes](#5-resolución-de-problemas-comunes)
+4.  [Verificación Post-Instalación](#4-verificación-post-instalación) 🔁
+5.  [Resolución de Problemas Comunes](#5-resolución-de-problemas-comunes) 🔧
 
 ---
 
@@ -66,7 +66,7 @@ Siga los siguientes pasos de forma secuencial. Cada paso incluye una descripció
 2.  En el menú de arranque, seleccionar la opción **"Installation"** y presionar `Enter`.
 
     <img src="./assets/Imagen7.png" alt="Instalar" width="400"/>.
-#### **Fase 2: Configuración**
+#### **Fase 2: Configuración** ⚙️
 3.  **Seleccionar** la configuración deseada así como los productos adicionales deseados.
 
     <img src="./assets/Imagen8.png" alt="Instalar" width="400"/>.
@@ -96,7 +96,7 @@ Una vez finalizada la instalación y reiniciado el sistema, realice las siguient
 
 ---
 
-### **4. Resolución de Problemas Comunes**
+### **4. Resolución de Problemas Comunes** 🔧
 
 | Problema | Causa Probable | Solución Propuesta |
 | :--- | :--- | :--- |
