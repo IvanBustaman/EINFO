@@ -68,20 +68,27 @@ Siga los siguientes pasos de forma secuencial. Cada paso incluye una descripció
 
     <img src="./assets/Imagen7.png" alt="Instalar" width="400"/>.
 
-3.  **Seleccionar** el idioma, la distribución de teclado y aceptar los términos de la licencia.
+3.  **Seleccionar** el idioma, la distribución de teclado y aceptar los términos de la licencia así como los productos adicionales.
 
     <img src="./assets/Imagen8.png" alt="Instalar" width="400"/>.
+4.  **Iniciamos la instalación** Seleccionamos en siguiente para confirmar.
 
+    <img src="./assets/Imagen9.png" alt="Instalar" width="400"/>.
 
+5.  **Creamos un usuario** Creamos nuestro usuario y definimos una contraseña segura para nuestro SO.
 
+    <img src="./assets/Imagen10.png" alt="Instalar" width="400"/>.
+6.  **Instalamos** Confirmamos la configuración que designamos previamente.
+
+    <img src="./assets/Imagen11.png" alt="Instalar" width="400"/>.
 ---
 
 ### **4. Verificación Post-Instalación**
 
 Una vez finalizada la instalación y reiniciado el sistema, realice las siguientes comprobaciones para validar el éxito del proceso:
-
+<img src="./assets/Imagen12.png" alt="Instalar" width="400"/>.
 - [ ] El sistema arranca correctamente sin el medio de instalación.
-- [ ] Se puede iniciar sesión con el usuario `root` y la contraseña definida.
+- [ ] Se puede iniciar sesión con el usuario `root` y la contraseña definida (En nuestro caso usamos un usuario diferente).
 - [ ] El sistema tiene conectividad a la red. Ejecutar `ping google.com`.
 - [ ] Los repositorios del sistema están configurados y activos. Ejecutar `zypper repos -d`.
 
