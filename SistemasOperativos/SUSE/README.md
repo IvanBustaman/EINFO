@@ -11,8 +11,7 @@ Este documento detalla el procedimiento técnico estandarizado para la instalaci
 
 ---
 
-### **Índice** 📘
-
+### **Índice** 
 
  I.  [Prerrequisitos](#I-prerrequisitos)
  II.  [Procedimiento de Instalación Detallado](#II-procedimiento-de-instalación-detallado) 
