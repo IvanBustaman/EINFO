@@ -13,20 +13,20 @@ Este documento detalla el procedimiento técnico estandarizado para la instalaci
 
 ### **Índice** 📘
 
-1.  [Prerrequisitos](#1-prerrequisitos)
-2.  [Preparación del Medio de Instalación](#2-preparación-del-medio-de-instalación)
-3.  [Procedimiento de Instalación Detallado](#3-procedimiento-de-instalación-detallado) 🔬
+I.  [Prerrequisitos](#I-prerrequisitos)
+II.  [Preparación del Medio de Instalación](#II-preparación-del-medio-de-instalación)
+III.  [Procedimiento de Instalación Detallado](#III-procedimiento-de-instalación-detallado) 🔬
     * [Fase 1: Arranque e Inicio](#fase-1-arranque-e-inicio)
     * [Fase 2: Configuración](#fase-2-configuración)
     * [Fase 3: Creación de usuario](#fase-3-creación-de-usuario)
-4.  [Verificación Post-Instalación](#4-verificación-post-instalación) 🔁
-5.  [Resolución de Problemas Comunes](#5-resolución-de-problemas-comunes) 🔧
+IV.  [Verificación Post-Instalación](#IV-verificación-post-instalación) 🔁
+V.  [Resolución de Problemas Comunes](#V-resolución-de-problemas-comunes) 🔧
 
 ---
 
-### **1. Prerrequisitos**
+### **I. Prerrequisitos**
 
-#### **1.1. Requisitos de Hardware**
+#### **A. Requisitos de Hardware**
 
 | Componente | Mínimo Requerido | Recomendado |
 | :--- | :--- | :--- |
@@ -35,7 +35,7 @@ Este documento detalla el procedimiento técnico estandarizado para la instalaci
 | **Espacio en Disco**| 10 GB | 40 GB o superior |
 | **Resolución** | 800x600 | 1024x768 o superior |
 
-#### **1.2. Requisitos de Software**
+#### **B. Requisitos de Software (ISO)**
 
 * Imagen ISO oficial de SUSE Linux Enterprise Server, obtenida desde [SUSE](https://www.suse.com/download/sles/).
 * Para ello será necesario registrarnos para obtener una prueba gratuita de 60 días.
@@ -56,7 +56,7 @@ Este documento detalla el procedimiento técnico estandarizado para la instalaci
 
 ---
 
-### **2. Procedimiento de Instalación Detallado**
+### **II. Procedimiento de Instalación Detallado**
 
 Siga los siguientes pasos de forma secuencial. Cada paso incluye una descripción y una captura de pantalla de referencia.
 
@@ -83,7 +83,7 @@ Siga los siguientes pasos de forma secuencial. Cada paso incluye una descripció
     <img src="./assets/Imagen11.png" alt="Instalar" width="400"/>.
 ---
 
-### **3. Verificación Post-Instalación**
+### **III. Verificación Post-Instalación**
 
 Una vez finalizada la instalación y reiniciado el sistema, realice las siguientes comprobaciones para validar el éxito del proceso:
 <img src="./assets/Imagen12.png" alt="Instalar" width="400"/>.
@@ -96,7 +96,7 @@ Una vez finalizada la instalación y reiniciado el sistema, realice las siguient
 
 ---
 
-### **4. Resolución de Problemas Comunes** 🔧
+### **IV. Resolución de Problemas Comunes** 🔧
 
 | Problema | Causa Probable | Solución Propuesta |
 | :--- | :--- | :--- |
