@@ -7,7 +7,7 @@
 
 ### **Resumen**
 
-Este documento detalla el procedimiento técnico estandarizado para la instalación y configuración inicial del sistema operativo SUSE Linux Enterprise Server (SLES), versión [Indicar la versión, ej. 15 SP4]. El objetivo es proporcionar una guía unívoca que garantice una implementación consistente y verificable.
+Este documento detalla el procedimiento técnico estandarizado para la instalación y configuración inicial del sistema operativo SUSE Linux Enterprise Server (SLES), versión 15 SP6. El objetivo es proporcionar una guía unívoca que garantice una implementación consistente y verificable. En caso de error puede dejar un mensaje. 
 
 ---
 
