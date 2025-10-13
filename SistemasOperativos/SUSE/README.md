@@ -57,35 +57,22 @@ Este documento detalla el procedimiento técnico estandarizado para la instalaci
 
 ---
 
-### **2. Preparación del Medio de Instalación**
-
-El medio de instalación se preparará utilizando una unidad USB, con un mínimo de 8 GB de capacidad.
-
-1.  **Descargar** la imagen ISO oficial desde el portal de SUSE.
-2.  **Verificar** la integridad del archivo descargado mediante su checksum SHA256.
-    ```bash
-    sha256sum sle-15-sp4-installer.iso
-    ```
-3.  **Grabar** la imagen ISO en la unidad USB utilizando la herramienta seleccionada.
-
----
-
-### **3. Procedimiento de Instalación Detallado**
+### **2. Procedimiento de Instalación Detallado**
 
 Siga los siguientes pasos de forma secuencial. Cada paso incluye una descripción y una captura de pantalla de referencia.
 
 #### **Fase 1: Arranque e Inicio**
 
-1.  **Conectar** el medio de instalación USB al equipo de destino y arrancar el sistema desde dicha unidad.
+1.  Iniciamos desde nuestro CD/DVD.
 2.  En el menú de arranque, seleccionar la opción **"Installation"** y presionar `Enter`.
 
-    ![Pantalla de bienvenida del instalador de SUSE](./assets/01-inicio-boot.png)
+    <img src="./assets/Imagen7.png" alt="Instalar" width="400"/>.
 
 3.  **Seleccionar** el idioma, la distribución de teclado y aceptar los términos de la licencia.
 
-    ![Selección de idioma y teclado](./assets/02-seleccion-idioma.png)
+    <img src="./assets/Imagen8.png" alt="Instalar" width="400"/>.
 
-*(... continúe detallando cada paso subsecuente de la misma manera)*
+
 
 ---
 
