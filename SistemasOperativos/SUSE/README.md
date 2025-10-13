@@ -83,7 +83,7 @@ Siga los siguientes pasos de forma secuencial. Cada paso incluye una descripció
     <img src="./assets/Imagen11.png" alt="Instalar" width="400"/>.
 ---
 
-### **4. Verificación Post-Instalación**
+### **3. Verificación Post-Instalación**
 
 Una vez finalizada la instalación y reiniciado el sistema, realice las siguientes comprobaciones para validar el éxito del proceso:
 <img src="./assets/Imagen12.png" alt="Instalar" width="400"/>.
@@ -96,7 +96,7 @@ Una vez finalizada la instalación y reiniciado el sistema, realice las siguient
 
 ---
 
-### **5. Resolución de Problemas Comunes**
+### **4. Resolución de Problemas Comunes**
 
 | Problema | Causa Probable | Solución Propuesta |
 | :--- | :--- | :--- |
