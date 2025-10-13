@@ -59,7 +59,7 @@ Este documento detalla el procedimiento técnico estandarizado para la instalaci
 
 ### **2. Preparación del Medio de Instalación**
 
-El medio de instalación se preparará utilizando una unidad USB de, con un mínimo de 8 GB de capacidad.
+El medio de instalación se preparará utilizando una unidad USB, con un mínimo de 8 GB de capacidad.
 
 1.  **Descargar** la imagen ISO oficial desde el portal de SUSE.
 2.  **Verificar** la integridad del archivo descargado mediante su checksum SHA256.
