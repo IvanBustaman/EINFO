@@ -17,9 +17,8 @@ Este documento detalla el procedimiento técnico estandarizado para la instalaci
 2.  [Preparación del Medio de Instalación](#2-preparación-del-medio-de-instalación)
 3.  [Procedimiento de Instalación Detallado](#3-procedimiento-de-instalación-detallado)
     * [Fase 1: Arranque e Inicio](#fase-1-arranque-e-inicio)
-    * [Fase 2: Configuración de Red y Registro](#fase-2-configuración-de-red-y-registro)
-    * [Fase 3: Particionamiento de Disco](#fase-3-particionamiento-de-disco)
-    * [Fase 4: Configuración Final](#fase-4-configuración-final)
+    * [Fase 2: Configuración](#fase-2-configuración)
+    * [Fase 3: Creación de usuario](#fase-3-creacion-de-usuario)
 4.  [Verificación Post-Instalación](#4-verificación-post-instalación)
 5.  [Resolución de Problemas Comunes](#5-resolución-de-problemas-comunes)
 
@@ -67,18 +66,19 @@ Siga los siguientes pasos de forma secuencial. Cada paso incluye una descripció
 2.  En el menú de arranque, seleccionar la opción **"Installation"** y presionar `Enter`.
 
     <img src="./assets/Imagen7.png" alt="Instalar" width="400"/>.
-
+#### **Fase 2: Configuración**
 3.  **Seleccionar** la configuración deseada así como los productos adicionales deseados.
 
     <img src="./assets/Imagen8.png" alt="Instalar" width="400"/>.
 4.  **Iniciamos la instalación** Seleccionamos en siguiente para confirmar.
 
     <img src="./assets/Imagen9.png" alt="Instalar" width="400"/>.
+    #### **Fase 3: Creación de usuario**
 
-5.  **Creamos un usuario** Creamos nuestro usuario y definimos una contraseña segura para nuestro SO.
+6.  **Creamos un usuario** Creamos nuestro usuario y definimos una contraseña segura para nuestro SO.
 
     <img src="./assets/Imagen10.png" alt="Instalar" width="400"/>.
-6.  **Instalamos** Confirmamos la configuración que designamos previamente.
+7.  **Instalamos** Confirmamos la configuración que designamos previamente.
 
     <img src="./assets/Imagen11.png" alt="Instalar" width="400"/>.
 ---
