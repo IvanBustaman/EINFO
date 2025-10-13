@@ -12,13 +12,13 @@ Este documento detalla el procedimiento técnico estandarizado para la instalaci
 ---
 ### **Índice** 📘
 
-I. [Prerrequisitos](#i-prerrequisitos)
-II. [Procedimiento de Instalación Detallado](#ii-procedimiento-de-instalación-detallado) 🔬
+ I. [Prerrequisitos](#i-prerrequisitos)
+ II. [Procedimiento de Instalación Detallado](#ii-procedimiento-de-instalación-detallado) 🔬
    * [Fase 1: Arranque e Inicio](#fase-1-arranque-e-inicio)
    * [Fase 2: Configuración](#fase-2-configuración-️)
    * [Fase 3: Creación de usuario](#fase-3-creación-de-usuario)
-III. [Verificación Post-Instalación](#iii-verificación-post-instalación) 🔁
-IV. [Resolución de Problemas Comunes](#iv-resolución-de-problemas-comunes-) 🔧
+ III. [Verificación Post-Instalación](#iii-verificación-post-instalación) 🔁
+ IV. [Resolución de Problemas Comunes](#iv-resolución-de-problemas-comunes-) 🔧
 ---
 
 ### **I. Prerrequisitos**
