@@ -17,7 +17,7 @@ Este documento detalla el procedimiento técnico estandarizado para la instalaci
  I.  [Prerrequisitos](#I-prerrequisitos)
  II.  [Procedimiento de Instalación Detallado](#II-procedimiento-de-instalación-detallado) 
     * [Fase 1: Arranque e Inicio](#fase-1-arranque-e-inicio)
-    * [Fase 2: Configuración](#fase-2-configuración)
+    * [Fase 2: Configuración](#fase-2-configuración--%EF%B8%8F)
     * [Fase 3: Creación de usuario](#fase-3-creación-de-usuario)
  III.  [Verificación Post-Instalación](#III-verificación-post-instalación) 
  IV.  [Resolución de Problemas Comunes](#IV-resolución-de-problemas-comunes) 
