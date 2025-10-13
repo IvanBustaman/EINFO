@@ -40,7 +40,7 @@ Este documento detalla el procedimiento técnico estandarizado para la instalaci
 
 * Imagen ISO oficial de SUSE Linux Enterprise Server, obtenida desde [SUSE](https://www.suse.com/download/sles/).
 * En este caso como va a ser instalada en una máquina virtual de nuestro servidor, lo primero que deberemos hacer es cargar el archivo ISO a nuestro servidor en PROXMOX.
-* ![Descarga de SUSE](./assets/imagen1.png)
+* ![Descarga de SUSE](./assets/Imagen1.png)
 
 
 ---
