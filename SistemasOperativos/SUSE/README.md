@@ -10,17 +10,15 @@
 Este documento detalla el procedimiento técnico estandarizado para la instalación y configuración inicial del sistema operativo SUSE Linux Enterprise Server (SLES), versión 15 SP6. El objetivo es proporcionar una guía unívoca que garantice una implementación consistente y verificable. En caso de error puede dejar un mensaje. 
 
 ---
+### **Índice** 📘
 
-### **Índice** 
-
- I.  [Prerrequisitos](#I-prerrequisitos)
- II.  [Procedimiento de Instalación Detallado](#II-procedimiento-de-instalación-detallado) 
+I. [Prerrequisitos](#i-prerrequisitos)
+II. [Procedimiento de Instalación Detallado](#ii-procedimiento-de-instalación-detallado) 🔬
     * [Fase 1: Arranque e Inicio](#fase-1-arranque-e-inicio)
-    * [Fase 2: Configuración](#fase-2-configuración--%EF%B8%8F)
+    * [Fase 2: Configuración](#fase-2-configuración-️)
     * [Fase 3: Creación de usuario](#fase-3-creación-de-usuario)
- III.  [Verificación Post-Instalación](#III-verificación-post-instalación) 
- IV.  [Resolución de Problemas Comunes](#iv-resolución-de-problemas-comunes-) 
-
+III. [Verificación Post-Instalación](#iii-verificación-post-instalación) 🔁
+IV. [Resolución de Problemas Comunes](#iv-resolución-de-problemas-comunes-) 🔧
 ---
 
 ### **I. Prerrequisitos**
