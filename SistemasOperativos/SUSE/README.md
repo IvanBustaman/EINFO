@@ -99,4 +99,4 @@ Una vez finalizada la instalación y reiniciado el sistema, realice las siguient
 | :--- | :--- | :--- |
 | **El sistema no arranca desde el USB** | Configuración incorrecta del orden de arranque en la BIOS/UEFI. | Acceder a la configuración de la BIOS/UEFI y priorizar el arranque desde dispositivos USB. |
 | **No se detecta el disco duro** | Falta de controladores de almacenamiento o disco dañado. | Verificar la conexión física del disco. Cargar controladores adicionales si es necesario desde el instalador. |
-| **Archivo ISO Corrupto** | No se cargó correctamente el archivo ISO de forma local. | Cargalor desde SSH con Copia segura (SCP) como se muestra en [Requisitos de Software](#12-requisitos-de-software). |
+| **Archivo ISO Corrupto** | No se cargó correctamente el archivo ISO de forma local. | Cargarlo desde SSH con Copia segura (SCP) como se muestra en [Requisitos de Software](#12-requisitos-de-software). |
