@@ -44,22 +44,22 @@ Este documento detalla el procedimiento técnico estandarizado para la instalaci
 * Elegimos nuestra versión deseada:
 * <img src="./assets/Imagen2.png" alt="Página de descarga de SUSE" width="400"/>.
 * En este caso como va a ser instalada en una máquina virtual de nuestro servidor, lo primero que deberemos hacer es cargar el archivo ISO a nuestro servidor en PROXMOX.
-* Entramos a nuestro servidor de Poxmox.
+* Entramos a nuestro servidor de Proxmox.
 * <img src="./assets/Imagen3.png" alt="Entramos a nuestro servidor de Poxmox" width="400"/>.
 * Cargamos el archivo ISO de forma local.
 * <img src="./assets/Imagen4.png" alt="Cargamos el archivo ISO de forma local" width="400"/>.
-*  Es posible que por el tamaño del archivo no se cargue correctamente ya que pesa entre 15 y 16 gb, por lo que deberemos cargarlo desde SSH con SCP.
+*  Es posible que por el tamaño del archivo no se cargue correctamente, ya que pesa entre 15 y 16 GB, por lo que deberemos cargarlo desde SSH con SCP.
 * <img src="./assets/Imagen6.png" alt="Cargamos el archivo ISO de forma local" width="800"/>.
 * 
   ``` scp "C:\Users\ivan2\Downloads\SUSE\SLE-15-SP6-Full-x86_64-GM-Media1-capnovelo.iso" root@192.168.1.90:/var/lib/vz/template/iso/ ```
-* Creamos nuestra Máquina virtual con las características deseadas segun nos permita nuestro servidor.
+* Creamos nuestra máquina virtual con las características deseadas segun nos permita nuestro servidor.
 * <img src="./assets/Imagen5.png" alt="Creamos la MV" width="400"/>.
 
 ---
 
 ### **2. Preparación del Medio de Instalación**
 
-El medio de instalación se preparará utilizando una unidad USB de, como mínimo, 8 GB de capacidad.
+El medio de instalación se preparará utilizando una unidad USB de, con un mínimo de 8 GB de capacidad.
 
 1.  **Descargar** la imagen ISO oficial desde el portal de SUSE.
 2.  **Verificar** la integridad del archivo descargado mediante su checksum SHA256.
