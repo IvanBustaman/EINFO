@@ -20,7 +20,7 @@ Este documento detalla el procedimiento técnico estandarizado para la instalaci
     * [Fase 2: Configuración](#fase-2-configuración--%EF%B8%8F)
     * [Fase 3: Creación de usuario](#fase-3-creación-de-usuario)
  III.  [Verificación Post-Instalación](#III-verificación-post-instalación) 
- IV.  [Resolución de Problemas Comunes](#IV-resolución-de-problemas-comunes) 
+ IV.  [Resolución de Problemas Comunes](#iv-resolución-de-problemas-comunes-) 
 
 ---
 
