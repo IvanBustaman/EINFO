@@ -88,10 +88,10 @@ Siga los siguientes pasos de forma secuencial. Cada paso incluye una descripció
 Una vez finalizada la instalación y reiniciado el sistema, realice las siguientes comprobaciones para validar el éxito del proceso:
 <img src="./assets/Imagen12.png" alt="Instalar" width="400"/>.
 - [ ] El sistema arranca correctamente sin el medio de instalación.
-<img src="./assets/Imagen13.png" alt="Instalar" width="400"/>.
+- [ ]<img src="./assets/Imagen13.png" alt="Instalar" width="400"/>.
 - [ ] Se puede iniciar sesión con el usuario `root` y la contraseña definida (En nuestro caso usamos un usuario diferente).
 - [ ] El sistema tiene conectividad a la red. Ejecutar `ping google.com`.
-<img src="./assets/Imagen15.png" alt="Instalar" width="400"/>.
+- [ ]<img src="./assets/Imagen15.png" alt="Instalar" width="400"/>.
 - [ ] Los repositorios del sistema están configurados y activos. Ejecutar `zypper repos -d`.
 
 ---
@@ -102,4 +102,4 @@ Una vez finalizada la instalación y reiniciado el sistema, realice las siguient
 | :--- | :--- | :--- |
 | **El sistema no arranca desde el USB** | Configuración incorrecta del orden de arranque en la BIOS/UEFI. | Acceder a la configuración de la BIOS/UEFI y priorizar el arranque desde dispositivos USB. |
 | **No se detecta el disco duro** | Falta de controladores de almacenamiento o disco dañado. | Verificar la conexión física del disco. Cargar controladores adicionales si es necesario desde el instalador. |
-| **Archivo ISO Corrupto** | No se cargó correctamente el archivo ISO de forma local. | Cargalor desde SSH con Copia segura (SCP) como se muestra en [Requisitos de Software](#1.2-rerrequisitos-de-software). |
+| **Archivo ISO Corrupto** | No se cargó correctamente el archivo ISO de forma local. | Cargalor desde SSH con Copia segura (SCP) como se muestra en [Requisitos de Software](#1.2-requisitos-de-software). |
