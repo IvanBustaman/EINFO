@@ -72,7 +72,7 @@ Siga los siguientes pasos de forma secuencial. Cada paso incluye una descripció
     <img src="./assets/Imagen9.png" alt="Instalar" width="400"/>.
     #### **Fase 3: Creación de usuario**
 
-6.  **Creamos un usuario** Creamos nuestro usuario y definimos una contraseña segura para nuestro SO.
+6.  **Creamos un usuario** y definimos una contraseña segura para nuestro SO.
 
     <img src="./assets/Imagen10.png" alt="Instalar" width="400"/>.
 7.  **Instalamos** Confirmamos la configuración que designamos previamente.
