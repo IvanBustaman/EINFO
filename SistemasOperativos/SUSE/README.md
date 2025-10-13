@@ -39,10 +39,15 @@ Este documento detalla el procedimiento técnico estandarizado para la instalaci
 #### **1.2. Requisitos de Software**
 
 * Imagen ISO oficial de SUSE Linux Enterprise Server, obtenida desde [SUSE](https://www.suse.com/download/sles/).
-* <img src="./assets/Imagen1.png" alt="Página de descarga de SUSE" width="500"/>
+*Para ello será necesario registrarnos para obtener una prueba gratuita de 60 días.
+* <img src="./assets/Imagen1.png" alt="Página de descarga de SUSE" width="400"/>
+*Elegimos nuestra versión deseada:
+<img src="./assets/Imagen2.png" alt="Página de descarga de SUSE" width="400"/>
 * En este caso como va a ser instalada en una máquina virtual de nuestro servidor, lo primero que deberemos hacer es cargar el archivo ISO a nuestro servidor en PROXMOX.
-* <img src="./assets/Imagen3.png" alt="Entramos a nuestro servidor de Poxmox" width="500"/>
-<img src="./assets/Imagen4.png" alt="Cargamos el archivo ISO de forma local" width="500"/>
+*Entramos a nuestro servidor de Poxmox
+* <img src="./assets/Imagen3.png" alt="Entramos a nuestro servidor de Poxmox" width="400"/>
+*Cargamos el archivo ISO de forma local
+*<img src="./assets/Imagen4.png" alt="Cargamos el archivo ISO de forma local" width="400"/>
 
 
 ---
