@@ -50,6 +50,7 @@ Este documento detalla el procedimiento técnico estandarizado para la instalaci
 * <img src="./assets/Imagen4.png" alt="Cargamos el archivo ISO de forma local" width="400"/>.
 *  Es posible que por el tamaño del archivo no se cargue correctamente ya que pesa entre 15 y 16 gb, por lo que deberemos cargarlo desde SSH con SCP.
 * <img src="./assets/Imagen6.png" alt="Cargamos el archivo ISO de forma local" width="800"/>.
+* 
   ```bash scp "C:\Users\ivan2\Downloads\SUSE\SLE-15-SP6-Full-x86_64-GM-Media1-capnovelo.iso" root@192.168.1.90:/var/lib/vz/template/iso/ ```
 * Creamos nuestra Máquina virtual con las características deseadas segun nos permita nuestro servidor.
 * <img src="./assets/Imagen5.png" alt="Creamos la MV" width="400"/>.
