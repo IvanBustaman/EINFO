@@ -44,7 +44,7 @@ Este documento detalla el procedimiento técnico estandarizado para la instalaci
 * Elegimos nuestra versión deseada:
 * <img src="./assets/Imagen2.png" alt="Página de descarga de SUSE" width="400"/>.
 * En este caso como va a ser instalada en una máquina virtual de nuestro servidor, lo primero que deberemos hacer es cargar el archivo ISO a nuestro servidor en PROXMOX.
-* Entramos a nuestro servidor de Proxmox.
+* Entramos a nuestro servidor de PROXMOX.
 * <img src="./assets/Imagen3.png" alt="Entramos a nuestro servidor de Poxmox" width="400"/>.
 * Cargamos el archivo ISO de forma local.
 * <img src="./assets/Imagen4.png" alt="Cargamos el archivo ISO de forma local" width="400"/>.
