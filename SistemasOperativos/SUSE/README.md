@@ -88,11 +88,11 @@ Siga los siguientes pasos de forma secuencial. Cada paso incluye una descripció
 Una vez finalizada la instalación y reiniciado el sistema, realice las siguientes comprobaciones para validar el éxito del proceso:
 <img src="./assets/Imagen12.png" alt="Instalar" width="400"/>.
 - [ ] El sistema arranca correctamente sin el medio de instalación.
-- [ ]<img src="./assets/Imagen13.png" alt="Instalar" width="400"/>.
+- <img src="./assets/Imagen13.png" alt="Instalar" width="400"/>.
 - [ ] Se puede iniciar sesión con el usuario `root` y la contraseña definida (En nuestro caso usamos un usuario diferente).
 - [ ] El sistema tiene conectividad a la red. Ejecutar `ping google.com`.
-- [ ]<img src="./assets/Imagen15.png" alt="Instalar" width="400"/>.
-- [ ] Los repositorios del sistema están configurados y activos. Ejecutar `zypper repos -d`.
+- <img src="./assets/Imagen15.png" alt="Instalar" width="400"/>.
+
 
 ---
 
