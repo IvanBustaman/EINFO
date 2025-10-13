@@ -38,7 +38,7 @@ Este documento detalla el procedimiento técnico estandarizado para la instalaci
 
 #### **1.2. Requisitos de Software**
 
-* Imagen ISO oficial de SUSE Linux Enterprise Server [Versión]. Obtenible desde [Enlace al sitio oficial].
+* Imagen ISO oficial de SUSE Linux Enterprise Server, obtenida desde [SUSE](https://www.suse.com/download/sles/).
 * Software para crear un medio de arranque USB (ej. Rufus, balenaEtcher).
 
 ---
