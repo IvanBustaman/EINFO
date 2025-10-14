@@ -53,8 +53,8 @@ Implementar una infraestructura de red virtualizada, segura y multi-segmentada q
 
 ```mermaid
 graph TD
-    subgraph Servidor Físico Huawei (Proxmox VE)
-        subgraph pfSense VM
+    subgraph "Servidor Físico Huawei (Proxmox VE)"
+        subgraph "pfSense VM"
             WAN --- vmbr0 (eth0 físico)
             LAN10 -- VLAN 10 --- vmbr1 (eth1 físico)
             LAN11 -- VLAN 11 --- vmbr1
