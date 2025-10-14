@@ -55,40 +55,43 @@ Implementar una infraestructura de red virtualizada, segura y multi-segmentada q
 graph TD
     subgraph "Servidor Físico Huawei (Proxmox VE)"
         subgraph "pfSense VM"
-            WAN --- vmbr0 (eth0 físico)
-            LAN10 -- VLAN 10 --- vmbr1 (eth1 físico)
-            LAN11 -- VLAN 11 --- vmbr1
-            LAN12 -- VLAN 12 --- vmbr1
-            LAN13 -- VLAN 13 --- vmbr1
-            LAN14 -- VLAN 14 --- vmbr1
-            LAN15 -- VLAN 15 --- vmbr1
+            %% Se usa la sintaxis id["texto"] para nodos con caracteres especiales
+            WAN --- vmbr0["vmbr0 (eth0 físico)"]
+            
+            %% El texto de los enlaces con espacios debe ir entre comillas
+            LAN10 -- "VLAN 10" --- vmbr1["vmbr1 (eth1 físico)"]
+            LAN11 -- "VLAN 11" --- vmbr1
+            LAN12 -- "VLAN 12" --- vmbr1
+            LAN13 -- "VLAN 13" --- vmbr1
+            LAN14 -- "VLAN 14" --- vmbr1
+            LAN15 -- "VLAN 15" --- vmbr1
         end
 
         subgraph "VMs en VLAN 11 (Seguridad)"
-            VM_SEC1(Zabbix/SIEM)
+            VM_SEC1("Zabbix/SIEM")
         end
 
         subgraph "VMs en VLAN 12 (NOC/SOC)"
-            VM_NOC1(PC Monitoreo)
+            VM_NOC1("PC Monitoreo")
         end
 
         subgraph "VMs en VLAN 13 (Producción)"
-            VM_PROD1(Servidor Web)
-            VM_PROD2(Servidor App)
+            VM_PROD1("Servidor Web")
+            VM_PROD2("Servidor App")
         end
 
         subgraph "VMs en VLAN 14 (Pentesting)"
-            VM_PENTEST1(Kali Linux)
+            VM_PENTEST1("Kali Linux")
         end
 
         subgraph "VMs en VLAN 15 (Bases de Datos)"
-            VM_DB1(MySQL/PostgreSQL)
+            VM_DB1("MySQL/PostgreSQL")
         end
     end
 
-    Internet([Internet]) --- Modem(Modem Infinitum <br> 192.168.1.254)
+    Internet([Internet]) --- Modem("Modem Infinitum <br> 192.168.1.254")
     Modem --- WAN
-    LAN10 --- AP(Access Point Wi-Fi)
+    LAN10 --- AP("Access Point Wi-Fi")
     AP --- Estudiantes([Estudiantes])
 
     %% Conexiones lógicas a pfSense
