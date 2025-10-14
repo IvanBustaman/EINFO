@@ -205,3 +205,79 @@ Para elevar el proyecto a un nivel de "cumplimiento militar", se deben considera
 | Fase 4: Creación de VMs de Prueba y Validación        | 2 Días            |
 | Fase 5: Documentación y Preparación de la Presentación | 4 Días            |
 | **Total Estimado** | **14 Días** |
+
+## 8. Gobernanza y Plan de Colaboración Holístico
+
+Este documento establece el marco de colaboración y la asignación de responsabilidades para el proyecto de infraestructura segura, integrando las capacidades del grupo de la especialidad de **Informática (Infraestructura y Servicios)** y del grupo de la **Maestría en Seguridad (Defensa y Operaciones)**.
+
+### 8.1. Visión Holística y Roles de los Grupos
+
+-   **Grupo de Informática (Equipos 1-4): "Los Arquitectos y Constructores"** 🏗️
+    -   **Misión:** Diseñar, construir y mantener la infraestructura de red, cómputo y almacenamiento. Su enfoque es la **disponibilidad, rendimiento y funcionalidad** de la plataforma sobre la cual operarán los servicios y los controles de seguridad. Son responsables de las capas 1 a 4 del modelo OSI y de las plataformas de virtualización y sistemas operativos.
+
+-   **Grupo de Maestría en Seguridad (Equipos 1-3): "Los Guardianes y Analistas"** 🛡️
+    -   **Misión:** Asegurar, monitorear y defender la infraestructura y los servicios construidos por el grupo de Informática. Su enfoque es la **confidencialidad, integridad y resiliencia** del entorno. Son responsables de implementar y operar las herramientas de seguridad avanzada (capas 5 a 7), analizar eventos y responder a incidentes.
+
+### 8.2. Modelo de Colaboración
+
+* **Coordinadores de Proyecto:** Un representante de la especialidad (líder del Equipo 1 de Informática) y un representante de la maestría actuarán como puntos de contacto principales para sincronizar los esfuerzos.
+* **Reuniones de Sincronización (Sync-up):** Se llevarán a cabo reuniones semanales cortas con los líderes de los 7 equipos para reportar avances, identificar bloqueos y planificar las siguientes acciones.
+* **Repositorio Centralizado:** El repositorio de GitHub será la única fuente de verdad para toda la documentación, scripts de configuración (`IaC - Infrastructure as Code`), y el seguimiento de tareas (`issues`).
+* **Principio de Dependencia:** Se reconoce que las tareas de la maestría dependen directamente de la correcta implementación de la infraestructura base por parte de los equipos de la especialidad.
+
+---
+
+### 8.3. Plan de Trabajo por Fases y Asignación de Equipos
+
+El proyecto se divide en cuatro fases lógicas. Cada equipo tiene un rol protagónico en diferentes momentos, pero la colaboración es constante.
+
+#### **FASE 1: Construcción de la Infraestructura Fundamental (Core Infrastructure)**
+* **Objetivo:** Establecer el entorno de virtualización, la red troncal y la segmentación lógica.
+* **Líder de Fase:** Equipo de Informática 1.
+
+| Equipo | Responsabilidades Principales en Fase 1 |
+| :--- | :--- |
+| **Informática 1 (Redes)** | 🔵 **(Protagónico)** Configuración del host Proxmox, creación de Linux Bridges (vmbr0, vmbr1). Despliegue y configuración completa de pfSense: interfaces WAN/LAN, creación de todas las VLANs (10-15), asignación de IPs, configuración de DHCP y DNS. Establecimiento de las reglas de firewall base (política de denegación por defecto). |
+| **Informática 2-4** | ⚪ **(Soporte)** Validar el esquema de direccionamiento IP y los requerimientos de conectividad para sus futuras VMs. |
+| **Maestría 1-3** | ⚪ **(Consultor)** Revisar la arquitectura de red desde una perspectiva de seguridad. Validar que la segmentación propuesta cumple con los requisitos para el despliegue de sus herramientas. |
+
+---
+
+#### **FASE 2: Despliegue de Servicios y Cargas de Trabajo (Service Deployment)**
+* **Objetivo:** Poblar la infraestructura con las máquinas virtuales que simularán un entorno productivo y de pruebas.
+* **Líder de Fase:** Coordinador de Informática.
+
+| Equipo | Responsabilidades Principales en Fase 2 |
+| :--- | :--- |
+| **Informática 1 (Redes)** | 🟡 **(Soporte Activo)** Crear las VMs en Proxmox según las especificaciones de los demás equipos. Asignar correctamente el VLAN Tag a cada VM. Ajustar reglas de firewall a demanda para permitir la instalación y configuración inicial. |
+| **Informática 2 (Servidores)** | 🔵 **(Protagónico)** Desplegar y configurar las VMs de servidores productivos en la **LAN 13** (ej. Servidor Web, App Server). Realizar el hardening básico del SO. |
+| **Informática 3 (Bases de Datos)**| 🔵 **(Protagónico)** Desplegar y configurar las VMs de bases de datos en la **LAN 15** (ej. MySQL, PostgreSQL). Configurar usuarios y permisos iniciales. |
+| **Informática 4 (Red Team)** | 🔵 **(Protagónico)** Desplegar y configurar las VMs de ataque en la **LAN 14** (ej. Kali Linux, Parrot OS). Instalar las herramientas para las pruebas. |
+| **Maestría 1-3** | ⚪ **(Observador)** Preparar los agentes y configuraciones de sus herramientas para la siguiente fase. |
+
+---
+
+#### **FASE 3: Implementación de Controles de Seguridad Avanzados (Security Overlay)**
+* **Objetivo:** Instrumentar la infraestructura con las herramientas de monitoreo, detección y respuesta.
+* **Líder de Fase:** Coordinador de la Maestría en Seguridad.
+
+| Equipo | Responsabilidades Principales en Fase 3 |
+| :--- | :--- |
+| **Informática 1 (Redes)** | 🟡 **(Soporte Activo)** Instalar los paquetes solicitados en pfSense (Suricata, etc.). Implementar las reglas de firewall complejas y Port Forwarding para el Reverse Proxy y WAF, siguiendo indicaciones de Maestría 1. |
+| **Informática 2, 3, 4** | 🟡 **(Soporte Activo)** Instalar los agentes de Wazuh en todas sus VMs, con el apoyo de Maestría 2. |
+| **Maestría 1 (Defensa Perimetral)**| 🔵 **(Protagónico)** Configurar el **IDS/IPS (Suricata)** en pfSense. Desplegar y configurar un **Reverse Proxy** y un **Web Application Firewall (WAF)** para proteger LAN 13. Desplegar **Honeypot**. |
+| **Maestría 2 (SOC/XDR)** | 🔵 **(Protagónico)** Desplegar el servidor **Wazuh** en la **LAN 12**. Gestionar el registro de agentes, configurar políticas de monitoreo y crear dashboards. |
+| **Maestría 3 (MDR/IR)** | 🔵 **(Protagónico)** Desplegar la plataforma de respuesta a incidentes en la **LAN 11**: **TheHive**, **Cortex** y **MISP**. Integrar estas herramientas con Wazuh. |
+
+---
+
+#### **FASE 4: Integración, Pruebas de Batalla y Operación (Integration & Battle Testing)**
+* **Objetivo:** Validar la arquitectura completa a través de un ejercicio de Red Team vs. Blue Team.
+* **Líder de Fase:** Ambos coordinadores.
+
+| Equipo | Responsabilidades Principales en Fase 4 |
+| :--- | :--- |
+| **Informática 1 (Redes)** | 🟡 **(Blue Team)** Monitorear el tráfico de red en pfSense y los logs del firewall. Colaborar para identificar y bloquear actividad maliciosa a nivel de red. |
+| **Informática 2-3 (Servicios)** | 🟡 **(Blue Team)** Monitorear el estado de sus aplicaciones y bases de datos. Reportar anomalías y aplicar parches recomendados. |
+| **Informática 4 (Red Team)** | 🔵 **(Protagónico - Red Team)** Ejecutar escenarios de ataque desde **LAN 14** contra **LAN 13**. Intentar la exfiltración de datos, escalada de privilegios y evasión. Documentar hallazgos. |
+| **Maestría 1-3 (Blue Team)** | 🔵 **(Protagónico - Blue Team)** Utilizar las herramientas (Suricata, Wazuh, TheHive) para **detectar**, **analizar**, **contener** y **erradicar** los ataques del Red Team, simulando el ciclo completo de respuesta a incidentes. |
