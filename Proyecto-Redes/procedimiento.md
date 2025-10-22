@@ -115,3 +115,97 @@ iface vmbr15 inet manual
     bridge-stp off
     bridge-fd 0
     # LAN 15 (Interna)
+
+
+## 3. Creación y Configuración de la VM pfSense
+
+1.  Cree una nueva VM en Proxmox para pfSense (OS tipo "Other", etc.).
+2.  Diríjase a la pestaña `Hardware` de la VM pfSense.
+3.  Añada siete (7) dispositivos de red. Se recomienda usar el modelo `VirtIO (paravirtualized)` para mejor rendimiento:
+    * **net0**: Bridge: `vmbr0` (Esta será la interfaz WAN).
+    * **net1**: Bridge: `vmbr10` (Esta será la interfaz LAN 10 - Admin).
+    * **net2**: Bridge: `vmbr11` (Esta será la interfaz LAN 11).
+    * **net3**: Bridge: `vmbr12` (Esta será la interfaz LAN 12).
+    * **net4**: Bridge: `vmbr13` (Esta será la interfaz LAN 13).
+    * **net5**: Bridge: `vmbr14` (Esta será la interfaz LAN 14).
+    * **net6**: Bridge: `vmbr15` (Esta será la interfaz LAN 15).
+
+4.  Inicie la VM e instale pfSense.
+
+## 4. Configuración Inicial de pfSense (Consola)
+
+Durante el primer arranque, pfSense solicitará la asignación de interfaces.
+
+1.  **VLANs**: Cuando pregunte por VLANs, responda **No**. La segmentación se está realizando a nivel de bridges de Proxmox, no con tags VLAN dentro de pfSense.
+2.  **Asignación de WAN**: Asigne la interfaz `vtnet0` (o la que corresponda a `net0` de Proxmox) como **WAN**.
+3.  **Asignación de LAN**: Asigne la interfaz `vtnet1` (o la que corresponda a `net1` de Proxmox) como **LAN**.
+4.  **Asignación de Opcionales**: Asigne `vtnet2` a `vtnet6` como interfaces opcionales (OPT1, OPT2, etc.).
+5.  **Configuración IP de LAN**: Una vez en el menú principal de la consola de pfSense, seleccione la opción `2) Set interface(s) IP address`.
+6.  Configure la interfaz **LAN**:
+    * **IP Address**: `172.20.10.1`
+    * **Subnet bit count**: `24`
+    * **Upstream gateway**: `none`
+    * **Enable DHCP Server on LAN**: Sí.
+    * **Start/End range**: Ej. `172.20.10.100` a `172.20.10.200`.
+
+## 5. Configuración en la Interfaz Web (WebGUI)
+
+Acceda a la WebGUI de pfSense desde una VM conectada a `vmbr10` (o temporalmente desde el host Proxmox si se crean reglas de firewall) en `http://172.20.10.1`.
+
+### 5.1. Configuración de Interfaces Opcionales (LAN 11-15)
+
+Deberá habilitar y configurar cada interfaz "OPT" que creó.
+
+1.  Vaya a `Interfaces` -> `Interface Assignments`.
+2.  Verá `OPT1` (asignada a `vtnet2`), `OPT2` (asignada a `vtnet3`), etc.
+3.  Haga clic en `OPT1` para habilitarla.
+4.  **Enable**: Marque "Enable interface".
+5.  **Description**: Cámbielo a un nombre descriptivo, ej. `LAN11`.
+6.  **IPv4 Configuration Type**: `Static IPv4`.
+7.  **IPv4 Address**: Asigne el gateway para esta red, ej. `172.20.11.1 /24`.
+8.  Guarde y aplique cambios.
+9.  **Repita este proceso** para todas las interfaces opcionales, asignando sus redes correspondientes (ej. `LAN12` con `172.20.12.1/24`, etc.).
+
+### 5.2. Configuración de DHCP para LAN 11-15
+
+Para que las VMs internas obtengan IP automáticamente:
+
+1.  Vaya a `Services` -> `DHCP Server`.
+2.  Verá pestañas para `LAN` (ya configurada), `LAN11`, `LAN12`, etc.
+3.  Haga clic en la pestaña `LAN11`.
+4.  Marque `Enable DHCP server on LAN11 interface`.
+5.  Defina el `Range` (ej. `172.20.11.100` a `172.20.11.200`).
+6.  Guarde.
+7.  **Repita este proceso** para `LAN12` a `LAN15`.
+
+### 5.3. Configuración de Reglas de Firewall
+
+Por defecto, pfSense bloquea todo el tráfico de las interfaces opcionales. Debe crear reglas para permitir el acceso a Internet.
+
+1.  Vaya a `Firewall` -> `Rules`.
+2.  Haga clic en la pestaña `LAN11`.
+3.  Presione `Add` (el botón "up").
+4.  **Action**: `Pass`.
+5.  **Interface**: `LAN11`.
+6.  **Protocol**: `Any`.
+7.  **Source**: `LAN11 net`.
+8.  **Destination**: `any`.
+9.  **Description**: `Allow LAN11 to Internet`.
+10. Guarde y aplique cambios.
+11. **Repita este proceso** para las pestañas `LAN12` a `LAN15`.
+
+## 6. Asignación de Máquinas Virtuales (VMs)
+
+Ahora puede asignar sus VMs de Proxmox a las redes correctas:
+
+* **VMs de Administración**: En la pestaña `Hardware` de la VM, configure su dispositivo de red para usar `Bridge: vmbr10`. Obtendrá una IP en el rango `172.20.10.0/24`.
+* **VMs Internas (Segmento 11)**: Configure su dispositivo de red para usar `Bridge: vmbr11`. Obtendrá una IP en el rango `172.20.11.0/24`.
+* ...y así sucesivamente para `vmbr12` a `vmbr15`.
+
+## Resumen del Flujo de Tráfico
+
+* **WAN (Infinitum)**: `Módem` -> `enpXs0` -> `vmbr0` -> `pfSense(WAN)`.
+* **Gestión PVE**: `enpXs0` -> `vmbr0` (IP: `192.168.1.100`).
+* **LAN 10 (Admin)**: `VMs Admin` -> `vmbr10` -> `pfSense(LAN10)`.
+* **LAN 10 (AP)**: `Access Point` -> `enpXs1` -> `vmbr10` (Tráfico Untagged) -> `pfSense(LAN10)`.
+* **LAN 11 (Interna)**: `VMs Internas` -> `vmbr11` (Switch Virtual) -> `pfSense(LAN11)`.
