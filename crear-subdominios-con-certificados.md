@@ -70,7 +70,9 @@ El *Backend* define el servidor o servicio interno al cual se reenviará el trá
 El *Frontend* gestiona las conexiones entrantes (públicas) y aplica las reglas de enrutamiento.
 
 1.  Navegar a la sección de **HAProxy > Frontend** y agregar uno nuevo (o editar el existente de acceso público).
+
 <img src="./Pruebas/assets/Imagen6.png" width="400"/>
+
 2.  Configurar los parámetros de escucha (Listen Address):
     * **External Address:** Seleccionar `WAN address (IPv4)`.
     * **Puerto:** `443` (puerto estándar para HTTPS).
