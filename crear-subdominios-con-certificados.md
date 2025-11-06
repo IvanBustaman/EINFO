@@ -54,12 +54,15 @@ Una vez que el certificado está emitido, se configura HAProxy para dirigir el t
 El *Backend* define el servidor o servicio interno al cual se reenviará el tráfico.
 
 1.  Navegar a la sección de **HAProxy > Backend**.
+
 <img src="./Pruebas/assets/Imagen4.png" width="400"/>
+
 2.  Agregar un nuevo backend con la siguiente configuración:
     * **Nombre:** Asignar un nombre identificativo (preferentemente relacionado con el subdominio o servicio).
     * **Forward to:** Configurar el modo `Dirección + Puerto`.
     * **Server List:** Definir la dirección IP interna y el puerto (e.g., `172.20.13.102:8081`) de la máquina virtual (VM) o servidor que aloja la aplicación.
 3.  **Guardar** la configuración del backend.
+
 <img src="./Pruebas/assets/Imagen5.png" width="400"/>
 
 ### 3.2. Definición del Frontend (Acceso Externo)
@@ -72,16 +75,23 @@ El *Frontend* gestiona las conexiones entrantes (públicas) y aplica las reglas 
     * **External Address:** Seleccionar `WAN address (IPv4)`.
     * **Puerto:** `443` (puerto estándar para HTTPS).
     * **SSL Offloading:** Activar la casilla `SSL`. Esta acción, conocida como "descarga SSL", permite que HAProxy gestione el cifrado y descifrado de la conexión, enviando tráfico sin cifrar (HTTP) a los servidores internos, lo cual optimiza el rendimiento del backend.
+
 <img src="./Pruebas/assets/Imagen7.png" width="400"/>
+
 3.  Definir las **Listas de Control de Acceso (ACL)**:
     * Crear una nueva ACL que evalúe el encabezado del host solicitado. Por ejemplo: `Host matches: nextcloud.einfo.space`.
+
 <img src="./Pruebas/assets/Imagen8.png" width="400"/>
+
 4.  Definir las **Acciones** basadas en la ACL:
     * Establecer una acción que dirija el tráfico que cumple la ACL (tráfico para `nextcloud.einfo.space`) al *Backend* correspondiente (`Use Backend`), seleccionando el backend creado en el paso
+
 <img src="./Pruebas/assets/Imagen9.png" width="400"/>   
+
 3.1.
 5.  En la sección **"Additional certificates"** (o similar, en el apartado de SSL Offloading), seleccionar el certificado ACME generado en el paso 2.5 que contiene el SAN del nuevo subdominio.
 6.  **Guardar** y **Aplicar Cambios**.
+
 <img src="./Pruebas/assets/Imagen10.png" width="400"/> 
 
 ### 3.3. Definición del Frontend (Acceso Interno) (Opcional)
@@ -91,6 +101,7 @@ Si se requiere que el subdominio también se resuelva correctamente desde la red
 1.  Crear un nuevo frontend.
 2.  En **Listen Address**, seleccionar la interfaz de la red interna (`IF_MGNT`).
 3.  Repetir la configuración de SSL Offloading, ACL, Acciones (backend) y asignación de certificado, análogamente al frontend externo (paso 3.2).
+
 <img src="./Pruebas/assets/Imagen14.png" width="400"/> 
 
 ## 4. Conclusión
