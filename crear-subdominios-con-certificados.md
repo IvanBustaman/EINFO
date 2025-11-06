@@ -27,7 +27,8 @@ El primer paso consiste en declarar el nuevo subdominio en el sistema de nombres
 Para asegurar la conexión al subdominio, se debe generar un certificado SSL/TLS.
 
 1.  Acceder a la interfaz de administración del firewall y navegar al módulo **"ACME Certificates"**.
-<img src="./Pruebas/assets/Imagen11.png" width="400"/> 
+<img src="./Pruebas/assets/Imagen11.png" width="400"/>
+
 2.  Crear un nuevo certificado o editar uno existente para incluir el nuevo subdominio:
     * **Nombre y Descripción:** Asignar un identificador descriptivo (nombre del dominio) para una fácil identificación.
     * **Cuenta ACME:** Seleccionar la cuenta de ACME previamente configurada.
@@ -37,8 +38,11 @@ Para asegurar la conexión al subdominio, se debe generar un certificado SSL/TLS
     * **Token (API Token):** Ingresar el token de API generado en Cloudflare (con permisos de edición de DNS).
     * **Zone ID:** Ingresar el ID de la zona DNS de Cloudflare corresponding al dominio.
 4.  **Guardar** la configuración de la entrada SAN.
+
 <img src="./Pruebas/assets/Imagen12.png" width="400"/>
+
 5.  Proceder con la solicitud del certificado seleccionando la opción **"Issue/Renew"** (Emitir/Renovar). El sistema ACME contactará a Let's Encrypt (u otro proveedor) y utilizará el token de Cloudflare para validar la propiedad del dominio.
+
 <img src="./Pruebas/assets/Imagen13.png" width="400"/> 
 
 ## 3. Configuración de HAProxy (Proxy Reverso)
