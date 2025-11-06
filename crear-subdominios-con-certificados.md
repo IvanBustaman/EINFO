@@ -10,8 +10,11 @@ El primer paso consiste en declarar el nuevo subdominio en el sistema de nombres
 
 1.  Acceder al panel de administración de Cloudflare.
 2.  Navegar a la sección de **Registro DNS**.
+
 <img src="./Pruebas/assets/Imagen1.png" width="400"/> 
+
 3.  Seleccionar **"Agregar registro"**.
+
 <img src="./Pruebas/assets/Imagen2.png" width="400"/>
  
 4.  Configurar los siguientes parámetros para el registro:
