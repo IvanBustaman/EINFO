@@ -12,12 +12,14 @@ El primer paso consiste en declarar el nuevo subdominio en el sistema de nombres
 2.  Navegar a la sección de **Registro DNS**.
 <img src="./Pruebas/assets/Imagen1.png" width="400"/> 
 3.  Seleccionar **"Agregar registro"**.
-<img src="./Pruebas/assets/Imagen2.png" width="400"/>    
+<img src="./Pruebas/assets/Imagen2.png" width="400"/>
+ 
 4.  Configurar los siguientes parámetros para el registro:
     * **Tipo:** `A`. Este tipo de registro asigna un nombre de dominio legible (el subdominio) a una dirección IPv4.
     * **Nombre:** El nombre específico del subdominio (`nextcloud.einfo.space`).
     * **Dirección IPv4:** La dirección IP pública del servidor de destino (el *endpoint* del firewall o balanceador).
 5.  Confirmar y **Guardar** el nuevo registro DNS.
+
 <img src="./Pruebas/assets/Imagen3.png" width="400"/> 
 
 ## 2. Generación de Certificados SSL/TLS (ACME)
