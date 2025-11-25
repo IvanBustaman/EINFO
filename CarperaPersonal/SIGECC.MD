@@ -64,9 +64,9 @@ Durante el diseño se implementaron las siguientes reglas de negocio para garant
 
 ---
 
-## 4. Diagrama Entidad-Relación (Código Fuente)
+## 4. Diagrama Entidad-Relación 
 
-Puede generar el diagrama visual pegando el siguiente código en [Mermaid Live Editor](https://mermaid.live).
+
 
 ```mermaid
 erDiagram
